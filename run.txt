@@ -1,0 +1,46 @@
+history
+
+    django-blog
+
+    1  wget -q https://git.io/v77xs -O /tmp/setup-workspace.sh && source /tmp/setup-workspace.sh
+    2  mkvirtualenv foo 
+    3  sudo pip3 install django==1.11 
+    4  pip freeze > requirements.txt
+    5  django admin startproject blog-web-app
+    6  django admin startproject blog-web-app . 
+    7  django-admin startproject blog-web-app . 
+    8  django-admin startproject blogWebApp . 
+    9  ls
+   10  pwd
+   11  whoami
+   12  python3 manage.py 
+   13   chmod +x manage.py 
+   14  ./manage.py migrate
+   15  ./manage.py migrate.py runserver $IP:PORT
+   16  ./manage.py migrate.py runserver $IP:$PORT
+   17  ./manage.py runserver $IP:$PORT
+   18  echo -e "*.sqlite3\n*.pyc\n.~c9\n_pycache_/" > .gitignore
+   19  git ad *
+   20  git commit -m "blogApp"
+   21  git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+   22   . 
+   23  . 
+   24  git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+   25  git push origin master
+   26  git status
+   27  git init
+   28  git status
+   29  git add *
+   30  git add status
+   31  status
+   32  git status
+   33  git commin -m "init"
+   34  git commit -m "init"
+   35  git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+   36  git commit -m "init"
+   37  git push origin master
+   38  git add *
+   39  git status
+   40  git commit -m "securtyFix"
+   41  git push origin master
+   42  history
