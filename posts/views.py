@@ -44,8 +44,7 @@ def create_or_edit_post(request, pk=None):
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
-            return redirect(post_detail,
-                post.pk)
+            return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
     return render(request,

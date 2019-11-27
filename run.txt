@@ -1,5 +1,106 @@
 
 
+    ERROR: Command errored out with exit status 1:
+     command: /home/ubuntu/.virtualenvs/foo/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-6v7cxo16/psycopg2/setup.py'"'"'; __file__='"'"'/tmp/pip-install-6v7cxo16/psycopg2/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info
+         cwd: /tmp/pip-install-6v7cxo16/psycopg2/
+    Complete output (23 lines):
+    running egg_info
+    creating /tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info/psycopg2.egg-info
+    writing /tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info/psycopg2.egg-info/PKG-INFO
+    writing dependency_links to /tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info/psycopg2.egg-info/dependency_links.txt
+    writing top-level names to /tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info/psycopg2.egg-info/top_level.txt
+    writing manifest file '/tmp/pip-install-6v7cxo16/psycopg2/pip-egg-info/psycopg2.egg-info/SOURCES.txt'
+    
+    Error: pg_config executable not found.
+    
+    pg_config is required to build psycopg2 from source.  Please add the directory
+    containing pg_config to the $PATH or specify the full executable path with the
+    option:
+    
+        python setup.py build_ext --pg-config /path/to/pg_config build ...
+    
+    or with the pg_config option in 'setup.cfg'.
+    
+    If you prefer to avoid building psycopg2 from source, please install the PyPI
+    'psycopg2-binary' package instead.
+    
+    For further information please check the 'doc/src/install.rst' file (also at
+    <http://initd.org/psycopg/docs/install.html>).
+    
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+
+
+summary of deployment. Deploying Django Projects to Heroku/AWS S3
+Your App
+   1. requirements.txt
+   2. Procfile
+   3. DB Connection
+   4. S3 Connection
+   5. Environment Variables
+   6. Github
+Heroku
+   1. Database
+   2. Config Vars (Environment Variables)
+   3. Deploy (Github)
+AWS
+   1. S3 Buckets
+   2. IAM (Security)
+        
+------------------------------------------------------------------------
+We can use either MySQL or Postgres DB on Heroku.
+We'll use Postgres for this example.
+1. Create a Heroku Personal Project
+   1.a Optionally enter a project name.
+       Must be unique accross heroku.
+       Perhaps prefix with name or website
+       e.g. niels-ecommerce
+   1.b Choose 'Europe' as Runtime Selection
+   1.c Select 'Resources' and under 'Add-ons' enter
+       postgres, and select Heroku Postgres.
+       Provision a hobby (free) database.
+   1.d Click on Settings, Reveal Config Vars and note
+       that there is now a DATABASE_URL setting.
+2. Modify App to Connect to Heroku DB instead of local
+   2.a sudo pip3 install dj-database-url
+   2.b sudo pip3 install psycopg2
+   2.c sudo pip3 freeze --local > requirements.txt
+   2.d In settings.py import dj_database_url
+   2.e Change the existing DB connection in settings.py
+       to use a URL
+       Comment out the following
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       }
+    }
+   Replace with this.
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
+  2.h Create a file called env.py in the project folder.
+      (Same folder as settings.py)
+      Add the DATABASE_URL and SECRET_KEY variables
+      as follows.
+   import os
+   os.environ.setdefault("SECRET_KEY", "<KEY HERE>")
+   os.environ.setdefault("DATABASE_URL", "<DB URL HERE>")
+  2.i python3 manage.py makemigrations
+      python3 manage.py migrate
+  2.j python3 manage.py createsuperuser
+3. Get Project Ready to run on Heroku
+   3.a Create Procfile(s)
+           One file called Procfile (Upper case P, no file extension)
+           web: gunicorn projectfolder.wsgi:application
+           projectfolder above is the name of the project file that we want to run,
+           it will be different for your project.
+   3.b sudo pip3 install gunicorn`
+   3.c pip3 freeze --local > requirements.txt
+1:05 PM
+3 d. Add your key-value pairs for all the environment variables to the config var in settings in the Heroku app dashboard. DATABASE_URL, SECRET_KEY and any others you have used such as Stripe or AWS keys.
+
+
+
+
 all commands
 ******************************
 ______________________________
