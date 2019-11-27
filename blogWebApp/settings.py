@@ -8,6 +8,9 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
+
+
+
 """
 
 import os
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
     "posts",
 ]
 
@@ -125,3 +129,4 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

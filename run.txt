@@ -1,5 +1,98 @@
 
 
+all commands
+******************************
+______________________________
+
+wget -q https://git.io/v77xs -O /tmp/setup-workspace.sh && source /tmp/setup-workspace.sh
+mkvirtualenv foo 
+sudo pip3 install django==1.11 
+pip freeze > requirements.txt
+django admin startproject blog-web-app
+django admin startproject blog-web-app . 
+django-admin startproject blog-web-app . 
+django-admin startproject blogWebApp . 
+ls
+pwd
+whoami
+python3 manage.py 
+ chmod +x manage.py 
+./manage.py migrate
+./manage.py migrate.py runserver $IP:PORT
+./manage.py migrate.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+echo -e "*.sqlite3\n*.pyc\n.~c9\n_pycache_/" > .gitignore
+git ad *
+git commit -m "blogApp"
+git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+ . 
+. 
+git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+git push origin master
+git status
+git init
+git status
+git add *
+git add status
+status
+git status
+git commin -m "init"
+git commit -m "init"
+git remote add origin https://github.com/MACmidiDEV/blogDjango.git
+git commit -m "init"
+git push origin master
+git add *
+git status
+git commit -m "securtyFix"
+git push origin master
+history
+echo history > run.txt
+git status
+git add *
+git commit -m "travicCI"
+git push origin master
+git push origin master
+./manage.py startapp posts
+ pip install pillow
+./manage.py migrate
+./manage.py migrate
+./manage.py migrate
+git add *
+git commit -m "travicCI"
+git push origin master
+git push origin master
+git push origin master
+./manage.py migrate
+manage.py makemigrations
+manage.py make migrations
+manage.py makemigrations
+rerun
+re run
+manage.py make migrations
+./manage.py migrate
+nigrate
+migrate
+migrate
+./manage.py migrate
+manage.py make migrations
+./manage.py makemigrations
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+./manage.py runserver $IP:$PORT
+work on foo
+workon foo
+pip  install django-forms-bootstrap
+
+
+******************************
 
 
   1  wget -q https://git.io/v77xs -O /tmp/setup-workspace.sh && source /tmp/setup-workspace.sh
