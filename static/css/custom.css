@@ -22,8 +22,6 @@ h1, h1 a {
 #masthead {
     padding-left:10px;
     min-height: 199px;
-	background-color: #ce57ce59;
- 
 }
 
 #masthead h1 {
@@ -128,8 +126,5 @@ a, a:hover {
 @media screen and (min-width: 768px) {
     #masthead h1 {
         font-size: 80px;
-    }
-    #the_lead {
-        font-size: 48px;
     }
 }

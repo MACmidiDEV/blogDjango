@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get("$C9_HOSTNAME"), '127.0.0.1', 'blogDjango-test-app.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get("$C9_HOSTNAME"), '127.0.0.1', 'blogDjango-test-app.herokuapp.com','4556f54eb2434682bae1cdb9f4859711.vfs.cloud9.us-east-1.amazonaws.com']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blog.wsgi.application'
+WSGI_APPLICATION = 'blogWebApp.wsgi.application'
 
 
 # Database
@@ -134,3 +134,35 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
